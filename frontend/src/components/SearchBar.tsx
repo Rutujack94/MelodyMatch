@@ -38,9 +38,10 @@ export function SearchBar({ onSelect, size = 'md', autoFocus, placeholder = 'Sea
       .then((res) => {
         if (!cancelled) setResults(res.results)
       })
-      .catch(() => {
-        if (!cancelled) setErrored(true)
-      })
+     .catch((error) => {
+  console.error('SEARCH ERROR:', error)
+  if (!cancelled) setErrored(true)
+})
       .finally(() => {
         if (!cancelled) setLoading(false)
       })
