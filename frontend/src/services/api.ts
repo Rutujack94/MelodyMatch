@@ -1,7 +1,7 @@
 import axios from 'axios'
 import type { RecommendationResponse, SearchResponse, SongDetail } from '../types'
 
-const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const baseURL = import.meta.env.VITE_API_URL ||  'https://melodymatch-c40m.onrender.com'
 
 export const api = axios.create({
   baseURL,
